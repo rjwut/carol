@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica');
+body {
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 17pt;
+  color: #999;
+  background-color: #111;
+}
+aside {
+  position: fixed;
+  z-index: 1;
+}
+iframe {
+  width: 100%;
+  border: 0;
+}
+header, h2, h3 {
+  color: #ccc;
+  font-variant: small-caps;
+}
+header p {
+  margin: 0;
+  text-indent: 0;
+  font-size: 130%;
+}
+main > header p {
+  font-size: 150%;
+}
+main > header, nav, section {
+  margin: 1em;
+}
+main > header, figure {
+  text-align: center;
+}
+h1 {
+  font-size: 36pt;
+}
+nav ol {
+  list-style-type: none;
+}
+article {
+  margin-top: 3em;
+}
+p {
+  text-indent: 2em;
+}
+blockquote {
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+article a {
+  position: relative;
+  vertical-align: super;
+  font-size: 0.6em;
+  text-decoration: none;
+}
+article a:after {
+    content: '';
+    position: absolute;
+    top: -0.25em;
+    bottom: -0.25em;
+    left: -0.5em;
+    right: -0.5em;
+}
+a:link, a:visited {
+  color: #077;
+}
+a:active, a:hover {
+  color: #0ff;
+}
+.caps {
+  font-variant: small-caps;
+}
+
+/* desktop */
+@media screen and (min-width: 721px) {
+  body {
+    overflow: hidden;
+  }
+  main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    overflow: auto;
+  }
+  aside {
+    top: 0;
+    left: 60%;
+    width: 40%;
+    height: 100%;
+  }
+  aside div {
+    display: none;
+  }
+  iframe {
+    height: 100%;
+    overflow: auto;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 720px) {
+  aside {
+    display: none;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+  body.footnotes aside {
+    display: block;
+  }
+  aside div {
+    color: #fff;
+    background-color: #222;
+    text-align: right;
+    cursor: pointer;
+    padding: 0 0.25em;
+    height: 1em;
+  }
+  iframe {
+    height: calc(100% - 1em);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: #333;
+    background-color: #fed;
+  }
+  header, h2, h3 {
+    color: #000;
+  }
+  a:link, a:visited {
+    color: #070;
+  }
+  a:active, a:hover {
+    color: #f70;
+  }
+}
