@@ -5,6 +5,7 @@ body {
   color: #999;
   background-color: #111;
 }
+
 aside {
   position: fixed;
   z-index: 1;
