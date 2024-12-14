@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica');
+
+* {
+  scrollbar-color: #077 #111;
+}
+*::-webkit-scrollbar-track {
+  background: #111;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #077;
+}
 body {
   font-family: 'IM Fell DW Pica', serif;
   font-size: 17pt;
   color: #999;
   background-color: #111;
 }
-
 aside {
   position: fixed;
   z-index: 1;
@@ -130,6 +139,15 @@ a:active, a:hover {
 }
 
 @media (prefers-color-scheme: light) {
+  * {
+    scrollbar-color: #733 #fed;
+  }
+  *::-webkit-scrollbar-track {
+    background: #fed;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #733;
+  }
   body {
     color: #333;
     background-color: #fed;
@@ -138,7 +156,7 @@ a:active, a:hover {
     color: #000;
   }
   a:link, a:visited {
-    color: #070;
+    color: #057;
   }
   a:active, a:hover {
     color: #f70;
